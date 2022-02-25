@@ -6,7 +6,7 @@ import { Formik } from "formik";
 import Swal from "sweetalert2";
 import '../css/login.css';
 import app_config from "../config";
-import img from './images/podcast.jpg'
+import img from './images/podcast.jpg';
 
 const Login = () => {
    
