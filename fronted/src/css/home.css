@@ -1,0 +1,25 @@
+.bg{
+    background-color: rgba(238, 224, 224, 0.87);
+    height:90vh;
+}
+.images{
+    height: 11rem;
+    margin-top: 190px;
+    margin-left: 90px;
+  
+}
+.row-1-podcast  {
+  background-color: aqua;
+  height: 900px;
+}
+.row-2-bottom{
+    background-color: rgb(218, 1, 1);
+    height: 800px;
+
+}
+.home-row{
+    background-image: url(../components/images/podcast.jpg);
+    background-size: cover;
+    height: 700px;
+  
+}
