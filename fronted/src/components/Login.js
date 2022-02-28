@@ -56,7 +56,7 @@ const Login = () => {
     return (
         <>
             <div className="row">
-                <div className="col-md-5  mx-auto card form-card container-fluid" id="form">
+                <div className="col-md-7 col-sm-12  mx-auto card form-card container-fluid" id="form">
                     <Formik  initialValues={loginForm} onSubmit={LoginSubmit} >
                         {({ values, handleSubmit, handleChange }) => (
                             <form onSubmit={handleSubmit}>
@@ -101,10 +101,9 @@ const Login = () => {
                     </Formik>
 
                 </div>
-                {/* <div className="col-md-7 img-bg">
-                    <img className="img" src={img} />
-                    <h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi deleniti officiis ad non sed impedit reiciendis, laborum omnis. Autem at ipsam unde mollitia odio nemo harum ratione impedit eveniet voluptatibus?</h6>
-                </div> */}
+                <div className="col-md-5 col-sm-12">
+                    <img className="login-side-img" src="https://www.podcastinsights.com/wp-content/uploads/2021/08/Podcast-Insights-green-mic.png" />
+                </div>
             </div>
         </>
 
