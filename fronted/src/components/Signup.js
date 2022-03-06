@@ -44,6 +44,8 @@ const Signup = () => {
                                         id="email"
                                         value={values.email}
                                         onChange={handleChange}
+                                        type="email"
+                                        required
                                     />
                                    
                                     

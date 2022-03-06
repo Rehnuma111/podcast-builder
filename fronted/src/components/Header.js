@@ -10,16 +10,19 @@ const Header = () => {
   
       <div className="collapse navbar-collapse" id="navbarColor02">
         <ul className="navbar-nav me-auto">
-          <li className="nav-item active">
+          {/* <li className="nav-item active">
             <a className="nav-link" href="#">Podcast blog
               <span className="visually-hidden">(current)</span>
             </a>
-          </li>
+          </li> */}
           <li className="nav-item">
             <NavLink className="nav-link" to ="/home">Home</NavLink>
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to ="/addpodcast">Addpodcast</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to ="/Blogs">Blogs</NavLink>
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/allListpodcast">ALLlistpodcast</NavLink>
