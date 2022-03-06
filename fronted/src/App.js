@@ -18,16 +18,13 @@ function App() {
         <Route element={<Login />} path="/login" />
         <Route element={<Signup />} path="/signup" />
         <Route element={<Blogs />} path="/Blogs" />
-        <Route element={<ListenPodcast />} path="/listenPodcast" />
+        <Route element={<ListenPodcast />} path="/listenPodcast/:id" />
         <Route element={<AllListPodcast />} path="/allListpodcast" />
         <Route element={<AddPodcast />} path="/addpodcast" />
         <Route path="/" element={<Navigate replace to="/home" />} />
       </Routes>
-
     </BrowserRouter>
   );
 }
 
 export default App;
-   
-    

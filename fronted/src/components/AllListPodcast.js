@@ -1,5 +1,6 @@
-import { Card, CardContent, CardMedia, Container } from "@mui/material";
+import { Button, Card, CardContent, CardMedia, Container } from "@mui/material";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import app_config from "../config";
 import "../css/alllistpodcast.css";
 import img from "./images/podcast.jpg";
@@ -8,6 +9,7 @@ const AllListpodcast = () => {
   const url = app_config.api_url;
   const [podcastList, setPodcastList] = useState([]);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   const fetchUsersData = () => {
     fetch(url + "/podcast/getall")
@@ -38,8 +40,13 @@ const AllListpodcast = () => {
             <div className="col-md-8">
               <CardContent>
                 <h1>{podcast.title}</h1>
-                <p> </p>
-                
+                <p>{podcast.description}</p>
+                <p>by {podcast.author.username}</p>
+                <Button
+                  onClick={(e) => navigate("/listenPodcast/" + podcast._id)}
+                >
+                  Listen Podcast
+                </Button>
               </CardContent>
             </div>
           </div>

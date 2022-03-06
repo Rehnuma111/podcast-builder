@@ -17,6 +17,7 @@ router.post("/add", (req, res) => {
 
 router.get("/getall", (req, res) => {
   Model.find({})
+    .populate("author")
     .then((data) => {
       res.status(200).json(data);
     })
@@ -29,6 +30,16 @@ router.delete("/delete/:userid", (req, res) => {
   Model.findByIdAndDelete(req.params.userid)
     .then((data) => {
       res.status(200).json({ message: "deleted successfully!" });
+    })
+    .catch((err) => {
+      res.status(500).json(err);
+    });
+});
+
+router.get("/getbyid/:podcastid", (req, res) => {
+  Model.findById(req.params.podcastid)
+    .then((data) => {
+      res.status(200).json(data);
     })
     .catch((err) => {
       res.status(500).json(err);
