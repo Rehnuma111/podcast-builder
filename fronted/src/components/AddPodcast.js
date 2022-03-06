@@ -1,51 +1,58 @@
 import { Formik } from "formik";
 import { useState } from "react";
 import app_config from "../config";
-import '../css/addpodcast.css';
+import "../css/addpodcast.css";
 
 const AddPodcast = () => {
-
   const [thumbnail, setThumbnail] = useState("");
+
+  const getUser = () => {
+    const user = sessionStorage.getItem("user");
+
+    if (user) {
+      console.log(user);
+      return JSON.parse(user);
+    }
+  };
+
+  // const [currentUser, setCurrentUser] = useState(getUser());
 
   const [file, setFile] = useState("");
   const url = app_config.api_url;
- 
 
   const podcastform = {
     title: "",
     description: "",
-    author: "",
+    author: "622469ae7a8605092a6b17ea",
     thumbnail: "",
-    file: ""
+    file: "",
   };
-
 
   const uploadThumbnail = (e) => {
     let file = e.target.files[0];
-    setThumbnail(thumbnail)
+    setThumbnail(file.name);
     let formdata = new FormData();
-    formdata.append('file', file);
+    formdata.append("file", file);
 
-    fetch(url + '/util/uploadfile', { method: 'POST', body: formdata })
-      .then(res => res.json())
-      .then(data => {
+    fetch(url + "/util/uploadfile", { method: "POST", body: formdata })
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
-      })
-  }
-
+      });
+  };
 
   const uploadFile = (e) => {
     let file = e.target.files[0];
-    setFile(file.name)
+    setFile(file.name);
     let formdata = new FormData();
-    formdata.append('file', file);
+    formdata.append("file", file);
 
-    fetch(url + '/util/uploadfile', { method: 'POST', body: formdata })
-      .then(res => res.json())
-      .then(data => {
+    fetch(url + "/util/uploadfile", { method: "POST", body: formdata })
+      .then((res) => res.json())
+      .then((data) => {
         console.log(data);
-      })
-  }
+      });
+  };
 
   const formSubmit = (values) => {
     values.thumbnail = thumbnail;
@@ -59,7 +66,7 @@ const AddPodcast = () => {
       },
     };
 
-    fetch(url + "/user/add", req_opt)
+    fetch(url + "/podcast/add", req_opt)
       .then((res) => {
         console.log(res.status);
         return res.json();
@@ -71,10 +78,9 @@ const AddPodcast = () => {
         console.error(err);
       });
   };
- 
+
   return (
     <>
-
       <div className="card col-md-6 ad-podcast ">
         <div className="card-body  ">
           <h1 className="head-podcast ">Add Podcast</h1>
@@ -98,10 +104,18 @@ const AddPodcast = () => {
                 />
 
                 <label className="mt-3 up-thumb">Upload Thumbnail</label>
-                <input type="file" className="form-control" onChange={uploadThumbnail} />
+                <input
+                  type="file"
+                  className="form-control"
+                  onChange={uploadThumbnail}
+                />
 
                 <label className="mt-3">Upload File</label>
-                <input type="file" className="form-control" onChange={uploadFile} />
+                <input
+                  type="file"
+                  className="form-control"
+                  onChange={uploadFile}
+                />
 
                 <button className="btn btn-primary mt-3 w-100" type="submit">
                   Submit

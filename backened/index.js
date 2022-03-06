@@ -15,8 +15,11 @@ app.use(express.json());
 
 // to connect routers
 app.use("/user", userRouter);
-app.use("/podcastRouter",podcastRouter);
-app.use("/util",utilRouter);
+app.use("/podcast", podcastRouter);
+app.use("/util", utilRouter);
+
+// to serve static resources
+app.use(express.static("./uploads"));
 
 app.listen(port, () => {
   console.log("server started");

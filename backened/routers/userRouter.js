@@ -53,7 +53,7 @@ router.post("/check-login", (req, res) => {
     .then((data) => {
       if (data) {
         if (data.password == formdata.password) {
-          res.status(200).json({ message: "login success" });
+          res.status(200).json(data);
         } else {
           res.status(300).json({ message: "password incorrect" });
         }
