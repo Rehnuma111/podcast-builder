@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import ListenPodcast from "./components/listenPodcast";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route element={<Login />} path="/login" />
         <Route element={<Signup />} path="/signup" />
         <Route element={<Blogs />} path="/Blogs" />
+        <Route element={<ListenPodcast />} path="/listenPodcast" />
         <Route element={<AllListPodcast />} path="/allListpodcast" />
         <Route element={<AddPodcast />} path="/addpodcast" />
         <Route path="/" element={<Navigate replace to="/home" />} />

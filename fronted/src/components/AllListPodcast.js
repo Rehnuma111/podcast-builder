@@ -38,12 +38,8 @@ const AllListpodcast = () => {
             <div className="col-md-8">
               <CardContent>
                 <h1>{podcast.title}</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Reiciendis ratione iure rerum aperiam et facere vel,
-                  praesentium tempora dignissimos dolores expedita qui dolorum
-                  dolor alias provident sit dolorem molestias dicta?
-                </p>
+                <p> </p>
+                
               </CardContent>
             </div>
           </div>
