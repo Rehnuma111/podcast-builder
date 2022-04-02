@@ -29,7 +29,7 @@ const AllListpodcast = () => {
     if (!loading) {
       return podcastList.map((podcast) => (
         <Card className="mt-5">
-          <div className="row bg-warning">
+          <div className="row bg-success">
             <div className="col-md-4">
               <CardMedia
                 component="img"
@@ -42,7 +42,7 @@ const AllListpodcast = () => {
                 <h1>{podcast.title}</h1>
                 <p>{podcast.description}</p>
                 {/* <p>by {podcast.author.username}</p> */}
-                <Button
+                <Button variant="contained"
                   onClick={(e) => navigate("/listenPodcast/" + podcast._id)}
                 >
                   Listen Podcast
