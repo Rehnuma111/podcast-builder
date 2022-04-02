@@ -1,25 +1,32 @@
-.bg{
-    background-color: rgba(238, 224, 224, 0.87);
-    height:90vh;
+.home-img1-bg {
+  background-image: url("https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80%22");
+  height: 30rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
 }
-/* .images{
-    height: 11rem;
-    margin-top: 190px;
-    margin-left: 90px;
-  
-} */
-.row-1-podcast  {
-  background-color: aqua;
-  height: 900px;
-}
-.row-2-bottom{
-    background-color: rgb(218, 1, 1);
-    height: 800px;
+/* .hero-section{
+ 
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+} */
+.head{
+  color: white;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.home-row{
-    background-image: url(../components/images/podcast.jpg);
-    background-size: cover;
-    height: 700px;
-  
+.para-head{
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-home{
+  display: flex;
+  align-items: center
 }

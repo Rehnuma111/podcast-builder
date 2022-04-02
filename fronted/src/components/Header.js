@@ -8,13 +8,10 @@ const Header = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
   
-      <div className="collapse navbar-collapse" id="navbarColor02">
-        <ul className="navbar-nav me-auto">
-          {/* <li className="nav-item active">
-            <a className="nav-link" href="#">Podcast blog
-              <span className="visually-hidden">(current)</span>
-            </a>
-          </li> */}
+      <div className="collapse navbar-collapse" id="navbarColor02"  style={{float:"right"}}>
+        <ul className="navbar-nav ml-auto "
+        >
+          
           <li className="nav-item">
             <NavLink className="nav-link" to ="/home">Home</NavLink>
           </li>
@@ -35,10 +32,10 @@ const Header = () => {
           </li>
         
         </ul>
-        <form className="d-flex">
+        {/* <form className="d-flex">
           <input className="form-control me-sm-2" type="text" placeholder="Search"/>
           <button className="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form> */}
       </div>
     </div>
   </nav>

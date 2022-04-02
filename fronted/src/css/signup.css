@@ -1,13 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 .text-center{
-    font-family: 'Open Sans', sans-serif;}
+    font-family: sans-serif;
+}
 
 .bg-1{
     /* background-color: rgb(9, 130, 211); */
-    height: 100%;
+  
 }
 .mycard{
    margin-top: 40px;
    /* border: 2px solid rgb(19, 3, 3); */
    padding: 30px;
+   margin-right: 100px;
+
+} 
+.img-signup{
+   width:800px;
+   height:600px;
+   position: relative;
+   background-size: cover;
+
 }
