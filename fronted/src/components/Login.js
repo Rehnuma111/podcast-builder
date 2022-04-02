@@ -1,4 +1,4 @@
-import { Button,  } from "@mui/material";
+import { Button } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import GoogleIcon from "@mui/icons-material/Google";
 import { Link, useNavigate } from "react-router-dom";
@@ -6,7 +6,6 @@ import { Formik } from "formik";
 import Swal from "sweetalert2";
 import "../css/login.css";
 import app_config from "../config";
-
 
 const Login = () => {
   const url = app_config.api_url;
@@ -19,7 +18,6 @@ const Login = () => {
 
   const LoginSubmit = (formdata) => {
     console.log(formdata);
-
     const reqOpt = {
       method: "POST",
       body: JSON.stringify(formdata),
@@ -58,8 +56,9 @@ const Login = () => {
       <div className="row">
         <div
           className="col-md-4 mx-auto  container-fluid"
-          style={{marginTop:"10px"}}
-          id="form">
+          style={{ marginTop: "10px" }}
+          id="form"
+        >
           <Formik initialValues={loginForm} onSubmit={LoginSubmit}>
             {({ values, handleSubmit, handleChange }) => (
               <form onSubmit={handleSubmit}>
@@ -70,14 +69,13 @@ const Login = () => {
                   <InstagramIcon style={{ marginRight: "8px" }} />
                   Continue With Spotify
                 </button>
-               <br />
+                <br />
                 <button className="login-google-btn mb-1 text-3 ">
                   <GoogleIcon style={{ marginRight: "14px" }} />
                   Continue with google
                 </button>
                 <br />
                 <div class="form-floating mb-7">
-                
                   <input
                     placeholder="email"
                     className="form-control"
@@ -115,7 +113,6 @@ const Login = () => {
             )}
           </Formik>
         </div>
-        
       </div>
     </>
   );
