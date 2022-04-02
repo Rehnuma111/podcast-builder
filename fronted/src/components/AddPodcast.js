@@ -1,5 +1,6 @@
 import { Formik } from "formik";
 import { useState } from "react";
+import Swal from "sweetalert2";
 import app_config from "../config";
 import "../css/addpodcast.css";
 
@@ -73,6 +74,11 @@ const AddPodcast = () => {
       })
       .then((data) => {
         console.log(data);
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+          text: "Registered Successfully",
+        });
       })
       .catch((err) => {
         console.error(err);

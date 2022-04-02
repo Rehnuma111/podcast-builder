@@ -41,7 +41,7 @@ const AllListpodcast = () => {
               <CardContent>
                 <h1>{podcast.title}</h1>
                 <p>{podcast.description}</p>
-                <p>by {podcast.author.username}</p>
+                {/* <p>by {podcast.author.username}</p> */}
                 <Button
                   onClick={(e) => navigate("/listenPodcast/" + podcast._id)}
                 >
