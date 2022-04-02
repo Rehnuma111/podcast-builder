@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 
-
 // import ReactAudioPlayer from 'react-audio-player';
 const ListenPodcast = () => {
   const [podcast, setPodcast] = useState({});
@@ -11,7 +10,6 @@ const ListenPodcast = () => {
 
   return (
     <>
-      
       {/* <ReactAudioPlayer
                 src="http://localhost:5000/music.mp3"
                 autoPlay
