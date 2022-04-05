@@ -87,7 +87,7 @@ const AddPodcast = () => {
 
   return (
     <>
-      <div className="card col-md-6 ad-podcast ">
+      <div className="card col-md-6 ad-podcast  ">
         <div className="card-body  ">
           <h1 className="head-podcast ">Add Podcast</h1>
           <Formik initialValues={podcastform} onSubmit={formSubmit}>
@@ -99,6 +99,7 @@ const AddPodcast = () => {
                   onChange={handleChange}
                   value={values.title}
                   id="title"
+                  required
                 />
 
                 <input
@@ -107,6 +108,7 @@ const AddPodcast = () => {
                   onChange={handleChange}
                   value={values.description}
                   id="description"
+                  required
                 />
 
                 <label className="mt-3 up-thumb">Upload Thumbnail</label>
@@ -114,6 +116,8 @@ const AddPodcast = () => {
                   type="file"
                   className="form-control"
                   onChange={uploadThumbnail}
+                  required
+
                 />
 
                 <label className="mt-3">Upload File</label>
@@ -121,6 +125,8 @@ const AddPodcast = () => {
                   type="file"
                   className="form-control"
                   onChange={uploadFile}
+                  required
+
                 />
 
                 <button className="btn btn-primary mt-3 w-100" type="submit">

@@ -15,9 +15,17 @@
 
 } 
 .img-signup{
-   width:800px;
+   width:700px;
    height:600px;
-   position: relative;
+   position: fixed;
    background-size: cover;
+   opacity: 0.8
+}
+.sign-google-btn{
+    background-color:rgb(8, 125, 227) ;
+    border-radius:25px;
+    width: 100%;
+    border:2px solid rgb(163, 159, 159);
+    height:2.5rem;
 
 }

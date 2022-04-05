@@ -4,6 +4,9 @@ import "../css/signup.css";
 import { Link } from "react-router-dom";
 import app_config from "../config";
 import Swal from "sweetalert2";
+import GoogleIcon from "@mui/icons-material/Google"
+
+
 
 const Signup = () => {
   const url = app_config.api_url;
@@ -40,23 +43,30 @@ const Signup = () => {
     <div className="bg-1">
       <div className="row">
         <div className="col-md-8">
-        <img  className="img-signup " src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" />
+        {/* <div className="content">
+          <h1>POHWGBFFHV</h1>
+        </div> */}
+        {/* <img  className="img-signup " src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" /> */}
+        
         </div>
-        <div className="col-md-4">
-          <div className="container-fluid mycard">
+        <div className="col-md-6   bg-light">
+          <div className="container-fluid mt-6 ">
             <Formik initialValues={signupForm} onSubmit={SignupSubmit}>
               {({ values, handleSubmit, handleChange }) => (
                 <form onSubmit={handleSubmit}>
-                  <h1 className="text-center">Sign Up </h1>
+                  <h1 className="text-center">Create your free account</h1>
+                  <button className="sign-google-btn mb-3 text-3 ">
+                  <GoogleIcon style={{ marginRight: "14px" }} />
+                  Continue with google
+                </button> 
                   <input
                     placeholder="username"
                     className="form-control mb-2"
                     id="username"
                     value={values.username}
                     onChange={handleChange}
-                    type="text"
-                   
-                  />
+                    type="text"/>
+
                   <input
                     placeholder="email"
                     className="form-control mb-2"

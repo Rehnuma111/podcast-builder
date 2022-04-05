@@ -50,14 +50,7 @@ h6{
     height:2.5rem;
 
 }
-.login-google-btn{
-    background-color:rgba(0, 0, 0) ;
-    border-radius:25px;
-    width: 100%;
-    border:2px solid rgb(163, 159, 159);
-    height:2.5rem;
 
-}
 .text-2{
     color: rgb(255, 255, 255);
 }
@@ -66,4 +59,14 @@ h6{
 }
 .text-3{
     color: rgb(255, 255, 255);
+}
+
+
+.logo-btn{
+    height: 6rem;
+    width: 100px;
+    margin-left: 8rem;
+    border-radius: 8rem;
+
+    justify-content: center ;
 }

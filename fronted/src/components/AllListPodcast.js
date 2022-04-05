@@ -28,8 +28,8 @@ const AllListpodcast = () => {
   const displayPodcast = () => {
     if (!loading) {
       return podcastList.map((podcast) => (
-        <Card className="mt-5">
-          <div className="row bg-success">
+        <Card className="mt-5 ">
+          <div className="row bg-light">
             <div className="col-md-4">
               <CardMedia
                 component="img"
