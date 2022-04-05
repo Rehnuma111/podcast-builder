@@ -15,14 +15,14 @@
 
 } */
 .head{
-  color: rgb(0, 0, 0);
+  color: rgb(234, 0, 0);
   padding-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .para-head{
-  color:rgb(0, 0, 0);
+  color:rgb(239, 5, 5);
   display: flex;
   align-items: center;
   justify-content: center;
