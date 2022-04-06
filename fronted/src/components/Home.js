@@ -19,6 +19,7 @@ const Home = () => {
      {/* LATEST EPISODES */}
 
       <div className="row">
+     <h1>Latest Episodes</h1>
       <AllListPodcast/>
 
 

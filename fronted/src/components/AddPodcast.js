@@ -87,29 +87,36 @@ const AddPodcast = () => {
 
   return (
     <>
-      <div className="card col-md-6 ad-podcast  ">
-        <div className="card-body  ">
-          <h1 className="head-podcast ">Add Podcast</h1>
+      <div className="card col-md-6 mx-auto mt-5 ">
+        <div className="card-body  " >
+          <h1 className="head-podcast " >Add Podcast</h1>
           <Formik initialValues={podcastform} onSubmit={formSubmit}>
             {({ values, handleChange, handleSubmit }) => (
               <form onSubmit={handleSubmit}>
+              <label  class="form-label mt-3">Title</label>
                 <input
                   placeholder="Title"
-                  className="form-control mt-3"
+                  className="form-control "
                   onChange={handleChange}
                   value={values.title}
                   id="title"
                   required
                 />
 
-                <input
+                {/* <input
                   placeholder="description"
                   className="form-control mt-3"
                   onChange={handleChange}
                   value={values.description}
                   id="description"
                   required
-                />
+                /> */}
+
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                  <textarea className="form-control" placeholder="description" onChange={handleChange} value={values.description}
+                    id="description" rows="3"></textarea>
+                </div>
 
                 <label className="mt-3 up-thumb">Upload Thumbnail</label>
                 <input
@@ -129,7 +136,7 @@ const AddPodcast = () => {
 
                 />
 
-                <button className="btn btn-primary mt-3 w-100" type="submit">
+                <button className="btn btn-success mt-3 w-100" type="submit">
                   Submit
                 </button>
               </form>

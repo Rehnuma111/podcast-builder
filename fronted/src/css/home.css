@@ -15,17 +15,23 @@
 
 } */
 .head{
-  color: rgb(234, 0, 0);
+  color: rgb(255, 255, 255);
   padding-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: 500;
+  font-size: 3rem;
+  font-family: serif;
 }
 .para-head{
-  color:rgb(239, 5, 5);
+  color:rgb(255, 255, 255);
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family:'proxima_nova_rgbold', Helvetica, Arial, sans-serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.6px;
 }
 .btn-home{
   display: flex;

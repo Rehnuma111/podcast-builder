@@ -37,9 +37,9 @@ const ListenPodcast = () => {
               />
          
           </div>
-          <div className="col-md-10 col-xs-12">
+          <div className="col-md-10 col-xs-12 ">
             <div className="m-4">
-             <div style={{fontWeight:"bolder",fontSize:"2rem" }}>
+             <div style={{fontWeight:"9rem",fontSize:"1rem" }}>
              {podcast.title}
              </div>
             

@@ -42,14 +42,9 @@ const Signup = () => {
   return (
     <div className="bg-1">
       <div className="row">
-        <div className="col-md-8">
-        {/* <div className="content">
-          <h1>POHWGBFFHV</h1>
-        </div> */}
-        {/* <img  className="img-signup " src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="" /> */}
-        
+        <div className="col-md-8">  
         </div>
-        <div className="col-md-6   bg-light">
+        <div className="col-md-4  ">
           <div className="container-fluid mt-6 ">
             <Formik initialValues={signupForm} onSubmit={SignupSubmit}>
               {({ values, handleSubmit, handleChange }) => (
@@ -66,7 +61,6 @@ const Signup = () => {
                     value={values.username}
                     onChange={handleChange}
                     type="text"/>
-
                   <input
                     placeholder="email"
                     className="form-control mb-2"

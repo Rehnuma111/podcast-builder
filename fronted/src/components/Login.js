@@ -6,6 +6,7 @@ import { Formik } from "formik";
 import Swal from "sweetalert2";
 import "../css/login.css";
 import app_config from "../config";
+import ParticlesBg from 'particles-bg';
 
 
 const Login = () => {
@@ -111,6 +112,7 @@ const Login = () => {
           </Formik>
         </div>
       </div>
+      <ParticlesBg type="fountain" bg={true} />
     </>
   );
 };
