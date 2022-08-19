@@ -2,7 +2,7 @@ import { Formik } from "formik";
 import { useState } from "react";
 import Swal from "sweetalert2";
 import app_config from "../config";
-import "../css/addpodcast.css";
+
 
 const AddPodcast = () => {
   const [thumbnail, setThumbnail] = useState("");
@@ -55,8 +55,9 @@ const AddPodcast = () => {
       });
   };
 
-  const formSubmit = (values) => {
+  const formSubmit = (values, { setSubmitting }) => {
     values.thumbnail = thumbnail;
+    setSubmitting(true);
     values.file = file;
     console.log(values);
     const req_opt = {
@@ -79,6 +80,7 @@ const AddPodcast = () => {
           title: "Success",
           text: "Registered Successfully",
         });
+        setSubmitting(false);
       })
       .catch((err) => {
         console.error(err);
@@ -86,14 +88,15 @@ const AddPodcast = () => {
   };
 
   return (
-    <>
-      <div className="card col-md-6 mx-auto mt-5 ">
-        <div className="card-body  " >
-          <h1 className="head-podcast " >Add Podcast</h1>
+    <div style={{minHeight:"100vh" ,backgroundColor: "#151515"}}> 
+      <div className="card col-md-6  mx-auto "  >
+        <div className="card-body    p-5" >
+          <h1 style={{textAlign:"center"}}>Add Podcast</h1>
+          <hr />  
           <Formik initialValues={podcastform} onSubmit={formSubmit}>
-            {({ values, handleChange, handleSubmit }) => (
+            {({ values, handleChange, handleSubmit, isSubmitting }) => (
               <form onSubmit={handleSubmit}>
-              <label  class="form-label mt-3">Title</label>
+                <label className="form-label mt-3"><b>Title</b></label>
                 <input
                   placeholder="Title"
                   className="form-control "
@@ -113,12 +116,12 @@ const AddPodcast = () => {
                 /> */}
 
                 <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                  <label for="exampleFormControlTextarea1" className="form-label">Description</label>
                   <textarea className="form-control" placeholder="description" onChange={handleChange} value={values.description}
                     id="description" rows="3"></textarea>
                 </div>
 
-                <label className="mt-3 up-thumb">Upload Thumbnail</label>
+                <label className="mt-3 ">Upload Thumbnail</label>
                 <input
                   type="file"
                   className="form-control"
@@ -133,10 +136,8 @@ const AddPodcast = () => {
                   className="form-control"
                   onChange={uploadFile}
                   required
-
                 />
-
-                <button className="btn btn-success mt-3 w-100" type="submit">
+                <button disabled={isSubmitting} className="btn btn-primary mt-5 w-100" type="submit" style ={{backgroundColor:"#4C3575"}}>
                   Submit
                 </button>
               </form>
@@ -144,7 +145,7 @@ const AddPodcast = () => {
           </Formik>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default AddPodcast;

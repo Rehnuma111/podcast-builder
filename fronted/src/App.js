@@ -7,7 +7,6 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
-import Carousel from "./components/Carousel";
 import ListenPodcast from "./components/listenPodcast";
 import Footer from "./components/Footer";
 
@@ -24,7 +23,7 @@ function App() {
         <Route element={<ListenPodcast />} path="/listenPodcast/:id" />
         <Route element={<AllListPodcast />} path="/allListpodcast" />
         <Route element={<AddPodcast />} path="/addpodcast" />
-        <Route element={<Carousel />} path="/abc" />
+        <Route element={<Footer />} path="/footer" />
         <Route path="/" element={<Navigate replace to="/home" />} />
         
       </Routes>

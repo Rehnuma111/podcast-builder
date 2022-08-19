@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e91fe60f-be6e-4099-bc0b-8f3a44101e76" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../fronted/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../fronted/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fronted/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronted/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fronted/src/components/AddPodcast.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronted/src/components/AddPodcast.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fronted/src/components/AllListPodcast.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronted/src/components/AllListPodcast.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fronted/src/components/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronted/src/components/Footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fronted/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronted/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fronted/src/components/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronted/src/components/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fronted/src/components/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronted/src/components/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fronted/src/components/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronted/src/components/Signup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fronted/src/components/listenPodcast.js" beforeDir="false" afterPath="$PROJECT_DIR$/../fronted/src/components/listenPodcast.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fronted/src/css/addpodcast.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fronted/src/css/addpodcast.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fronted/src/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/../fronted/src/css/signup.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="28Cdd615gqH1ntHctR1zqrocmYB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e91fe60f-be6e-4099-bc0b-8f3a44101e76" name="Changes" comment="" />
+      <created>1650724607335</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1650724607335</updated>
+    </task>
+    <servers />
+  </component>
+</project>

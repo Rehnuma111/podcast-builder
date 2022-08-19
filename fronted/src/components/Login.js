@@ -1,15 +1,39 @@
-import { Button } from "@mui/material";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import GoogleIcon from "@mui/icons-material/Google";
+import { Button, Card, Container, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { Formik } from "formik";
 import Swal from "sweetalert2";
-import "../css/login.css";
 import app_config from "../config";
-import ParticlesBg from 'particles-bg';
+import React from "react";
+import { Visibility, VisibilityOff } from "@mui/icons-material";
+
 
 
 const Login = () => {
+
+  const [values, setValues] = React.useState({
+    password: '',
+    showPassword: false,
+  });
+
+  const [showPassword, setShowPassword] = React.useState(false);
+
+
+  const handleChange2 = (prop) => (event) => {
+    setValues({ ...values, [prop]: event.target.value });
+  };
+
+
+  const handleClickShowPassword = () => {
+    setValues({
+      ...values,
+      showPassword: !values.showPassword,
+    });
+  };
+
+  const handleMouseDownPassword = (event) => {
+    event.preventDefault();
+  };
+
   const url = app_config.api_url;
   const loginForm = {
     email: "",
@@ -54,66 +78,81 @@ const Login = () => {
   };
 
   return (
-    <>
-      <div className="row">
-        <div
-          className="col-md-4 mx-auto  container-fluid"
-          style={{ marginTop: "10px" }}
-          id="form"
-        >
-          <Formik initialValues={loginForm} onSubmit={LoginSubmit}>
-            {({ values, handleSubmit, handleChange }) => (
-              <form onSubmit={handleSubmit}>  
-              <img className="logo-btn " src="https://t4.ftcdn.net/jpg/02/90/67/89/360_F_290678971_Bk11xnoP5lQw4US7wCSId6jcKmWSfDBg.jpg" alt="" /> 
-                <hr />
-                
-                <br />
-                <label className="mb-1">Email address *</label>
-                <div class="form-floating mb-7" style={{marginBottom:"1rem"}}>
-                  
-                  <input
-                    placeholder="email"
-                    className="form-control"
-                    id="email"
-                    type="email"
-                    value={values.email}
-                    onChange={handleChange}
-                    required
-                  />
-                  <label for="email">Email Address</label>
-                </div>
-                <label className="mb-1">Password *</label>
-                <div class="form-floating mb-7">
-                  <input
-                    type="password"
-                    placeholder="password"
-                    className="form-control "
-                    id="password"
-                    value={values.password}
-                    onChange={handleChange}
-                  />
-                  <label for="email ">Password</label>
-                </div>
-                <Link to="/">Forget password ?</Link>
+    <div style={{ minHeight: "100vh" }}>
+     
+     
+      <section className="vh-100">
+        <div className="container-fluid h-custom">
+          <div className="row d-flex justify-content-center align-items-center h-100">
+            <div className="col-md-9 col-lg-6 col-xl-5">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                className="img-fluid"
+                alt="Sample image"
+              />
+            </div>
+            <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+              <Formik initialValues={loginForm} onSubmit={LoginSubmit}>
+                {({ values, handleSubmit, handleChange }) => (
+                  <form onSubmit={handleSubmit}>
+                    {/* <img className="logo-btn " src="https://t4.ftcdn.net/jpg/02/90/67/89/360_F_290678971_Bk11xnoP5lQw4US7wCSId6jcKmWSfDBg.jpg" alt="" /> */}
+                    <h1 style={{ textAlign: "center" }}>Log In</h1>
+                    <hr />
+                    <br />
 
-        
-                <Button
-                  variant="contained"
-                  className="mt-3 ml-3 w-100"
-                  type="submit"
-                >
-                  Login
-                </Button>
-                <p className="mt-3">
-                  Don't have an account ? <Link to="/signup">Signup Now</Link>
-                </p>
-              </form>
-            )}
-          </Formik>
+                    <TextField style={{ width: "100%", marginBottom: "2rem" }} label="Email" variant="outlined"
+                      type="email"
+                      placeholder="Email"
+                      id="email"
+                      value={values.email}
+                      onChange={handleChange} />
+
+                    <FormControl style={{ width: "100%", marginBottom: "2rem" }} variant="outlined">
+                      <InputLabel htmlFor="outlined-adornment-password">
+                        Password
+                      </InputLabel>
+                      <OutlinedInput
+                        placeholder="Password"
+                        id="password"
+                        type={showPassword ? "text" : "password"}
+                        value={values.password}
+                        onChange={handleChange}
+                        endAdornment={
+                          <InputAdornment position="end">
+                            <IconButton
+                              aria-label="toggle password visibility"
+                              onClick={e => setShowPassword(!showPassword)}
+                              edge="end"
+                            >
+                              {showPassword ? <VisibilityOff /> : <Visibility />}
+                            </IconButton>
+                          </InputAdornment>
+                        }
+                        label="Password"
+                      />
+                    </FormControl>
+                    <Button
+                      variant="contained"
+                      className="mt-3 ml-3 w-100"
+                      type="submit"
+                    >
+                      Login
+                    </Button>
+                    <p className="mt-3">
+                      Don't have an account ? <Link to="/signup">Signup Now</Link>
+                    </p>
+                  </form>
+                )}
+              </Formik>
+            </div>
+          </div>
         </div>
-      </div>
-      <ParticlesBg type="fountain" bg={true} />
-    </>
+
+
+      </section>
+
+
+    </div>
   );
 };
 
@@ -121,13 +160,3 @@ export default Login;
 
 
 
-{/* <Button variant="contained" className="mt-2 ml-4w w-100 " startIcon={<InstagramIcon />} >Instagram</Button> */}
-                {/* <button className="login-insta-btn mb-2 text-2">
-                  <InstagramIcon style={{ marginRight: "8px" }} />
-                  Continue With Spotify
-                </button>
-                <br />
-                <button className="login-google-btn mb-1 text-3 ">
-                  <GoogleIcon style={{ marginRight: "14px" }} />
-                  Continue with google
-                </button> */}

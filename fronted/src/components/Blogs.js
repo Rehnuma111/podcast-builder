@@ -5,43 +5,206 @@ const Blog = () => {
     return (
         <>
             <Container>
-                <div className="row container-fluid">
-                    <div className='col-md-6'>
-                        <div class="card" style={{ width: "28rem"  }}>
-                            <img src="https://mymsaa.org/wp-content/uploads/2021/06/podcasts2.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div className='col-md-6'>
-                        <div class="card" style={{ width: "28rem" }}>
-                            <img src="https://mymsaa.org/wp-content/uploads/2021/06/podcasts2.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    {/* <div className='col-md-4'>
-                        <div class="card" style={{ width: "28rem" }}>
-                            <img src="https://mymsaa.org/wp-content/uploads/2021/06/podcasts2.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
 
-                    </div> */}
+                <div class="container">
+                    <div class="row height d-flex justify-content-center align-items-center">
+                        <div class="col-md-12">
+                            <div class="search">
+                                <i class="fa fa-search"></i>
+                                <input type="text" class="form-control" placeholder="Search podcast"  />
+                                <button  type="button" class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </Container>
+                <div className="row row-cols-1 row-cols-md-3 m-5">
+                    <div className="col mb-4">
+                        <div className="card h-100">
+                            {/*Card image*/}
+                            <div className="view overlay">
+                                <img
+                                    className="card-img-top"
+                                    src="https://mdbootstrap.com/img/Photos/Others/images/16.webp"
+                                    alt="Card image cap"
+                                />
+                                <a href="#!">
+                                    <div className="mask rgba-white-slight" />
+                                </a>
+                            </div>
+                            {/*Card content*/}
+                            <div className="card-body">
+                                {/*Title*/}
+                                <h4 className="card-title">Card title</h4>
+                                {/*Text*/}
+                                <p className="card-text">
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </p>
+                                {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
+                                <button type="button" className="btn btn-primary btn-md">
+                                    Read more
+                                </button>
+                            </div>
+                        </div>
+                        {/* Card */}
+                    </div>
+                    <div className="col mb-4">
+                        <div className="card h-100">
+                            {/*Card image*/}
+                            <div className="view overlay">
+                                <img
+                                    className="card-img-top"
+                                    src="https://mdbootstrap.com/img/Photos/Others/images/16.webp"
+                                    alt="Card image cap"
+                                />
+                                <a href="#!">
+                                    <div className="mask rgba-white-slight" />
+                                </a>
+                            </div>
+                            {/*Card content*/}
+                            <div className="card-body">
+                                {/*Title*/}
+                                <h4 className="card-title">Card title</h4>
+                                {/*Text*/}
+                                <p className="card-text">
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </p>
+                                {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
+                                <button type="button" className="btn btn-primary btn-md">
+                                    Read more
+                                </button>
+                            </div>
+                        </div>
+                        {/* Card */}
+                    </div>
+                    <div className="col mb-4">
+                        <div className="card h-100">
+                            {/*Card image*/}
+                            <div className="view overlay">
+                                <img
+                                    className="card-img-top"
+                                    src="https://mdbootstrap.com/img/Photos/Others/images/16.webp"
+                                    alt="Card image cap"
+                                />
+                                <a href="#!">
+                                    <div className="mask rgba-white-slight" />
+                                </a>
+                            </div>
+                            {/*Card content*/}
+                            <div className="card-body">
+                                {/*Title*/}
+                                <h4 className="card-title">Card title</h4>
+                                {/*Text*/}
+                                <p className="card-text">
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content. Some quick example text to build on the
+                                    card title and make up the bulk of the card's content.
+                                </p>
+                                {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
+                                <button type="button" className="btn btn-primary btn-md">
+                                    Read more
+                                </button>
+                            </div>
+                        </div>
+                        {/* Card */}
+                    </div>
+                    <div className="col mb-4">
+                        <div className="card h-100">
+                            {/*Card image*/}
+                            <div className="view overlay">
+                                <img
+                                    className="card-img-top"
+                                    src="https://mdbootstrap.com/img/Photos/Others/images/16.webp"
+                                    alt="Card image cap"
+                                />
+                                <a href="#!">
+                                    <div className="mask rgba-white-slight" />
+                                </a>
+                            </div>
+                            {/*Card content*/}
+                            <div className="card-body">
+                                {/*Title*/}
+                                <h4 className="card-title">Card title</h4>
+                                {/*Text*/}
+                                <p className="card-text">
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </p>
+                                {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
+                                <button type="button" className="btn btn-primary btn-md">
+                                    Read more
+                                </button>
+                            </div>
+                        </div>
+                        {/* Card */}
+                    </div>
+                    <div className="col mb-4">
+                        <div className="card h-100">
+                            {/*Card image*/}
+                            <div className="view overlay">
+                                <img
+                                    className="card-img-top"
+                                    src="https://mdbootstrap.com/img/Photos/Others/images/16.webp"
+                                    alt="Card image cap"
+                                />
+                                <a href="#!">
+                                    <div className="mask rgba-white-slight" />
+                                </a>
+                            </div>
+                            {/*Card content*/}
+                            <div className="card-body">
+                                {/*Title*/}
+                                <h4 className="card-title">Card title</h4>
+                                {/*Text*/}
+                                <p className="card-text">
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </p>
+                                {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
+                                <button type="button" className="btn btn-primary btn-md">
+                                    Read more
+                                </button>
+                            </div>
+                        </div>
 
+                        {/* Card */}
+                    </div>
+                    <div className="col mb-4">
+                        <div className="card h-100">
+                            {/*Card image*/}
+                            <div className="view overlay">
+                                <img
+                                    className="card-img-top"
+                                    src="https://mdbootstrap.com/img/Photos/Others/images/16.webp"
+                                    alt="Card image cap"
+                                />
+                                <a href="#!">
+                                    <div className="mask rgba-white-slight" />
+                                </a>
+                            </div>
+                            {/*Card content*/}
+                            <div className="card-body">
+                                {/*Title*/}
+                                <h4 className="card-title">Card title</h4>
+                                {/*Text*/}
+                                <p className="card-text">
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </p>
+                                {/* Provides extra visual weight and identifies the primary action in a set of buttons */}
+                                <button type="button" className="btn btn-primary btn-md">
+                                    Read more
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Card */}
+                    </div>
+
+                </div>
+
+            </Container>
         </>
 
     )
