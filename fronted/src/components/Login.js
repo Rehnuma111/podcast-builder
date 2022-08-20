@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import app_config from "../config";
 import React from "react";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
+import sample from "./images/podcast2.png";
 
 
 
@@ -79,14 +80,12 @@ const Login = () => {
 
   return (
     <div style={{ minHeight: "100vh" }}>
-     
-     
-      <section className="vh-100">
+      <section className="vh-100 p-5 mt-5">
         <div className="container-fluid h-custom">
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col-md-9 col-lg-6 col-xl-5">
               <img
-                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                src={sample}
                 className="img-fluid"
                 alt="Sample image"
               />
@@ -135,6 +134,7 @@ const Login = () => {
                       variant="contained"
                       className="mt-3 ml-3 w-100"
                       type="submit"
+                      style={{backgroundColor:"#9c27b0"}}
                     >
                       Login
                     </Button>

@@ -52,13 +52,12 @@ const AllListpodcast = () => {
               />
             </div>
             <div className="col-md-8">
-
               <h1 style={{ fontSize: "2.5rem", fontWeight: "bolder", color: "white" }}>{podcast.title}</h1>
               <p style={{ color: "white", marginTop: "2rem" }}>{podcast.description.substring(0, 200)} ...</p>
               {/* <p>by {podcast.author.username}</p> */}
-              <Button variant="contained" color="primary"
+              <Button variant="contained"  style={{backgroundColor:"#9c27b0", color:"white"}} className="p-2 w-25"
                 onClick={(e) => navigate("/listenPodcast/" + podcast._id)}
-              >
+              >ListenPodcast
               </Button>
             </div>
           </div>
@@ -76,7 +75,7 @@ const AllListpodcast = () => {
             <div class="search">
               <i class="fa fa-search"></i>
               <input type="text" class="form-control" placeholder="Search podcast" onChange={e => setFilter(e.target.value)} />
-              <button onClick={searchPodcast} type="button" class="btn btn-primary">Search</button>
+              <button onClick={searchPodcast} type="button"  style={{backgroundColor:"#9c27b0", color:"white", border:"none", borderRadius:"5px"}}>Search</button>
             </div>
           </div>
         </div>

@@ -8,6 +8,7 @@ import Swal from "sweetalert2";
 import app_config from "../config";
 import img from "./images/podcast.jpg";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
+import sample from "./images/signup.png";
 
 const Signup = () => {
 
@@ -113,28 +114,27 @@ const Signup = () => {
                                                             </Link>{" "}
                                                             and<Link to="/">Policy</Link>{" "}
                                                         </p>
-                                                        <button
+                                                        {/* <button
                                                             style={{ width: "92vh" }}
                                                             variant="contained"
-                                                            className=" submit-btn mt-2 ml-3 w-100"
+                                                            className=" submit-btn "
                                                             type="submit"
                                                         >
-                                                            Create an account
-                                                        </button>
+                                                          
+                                                        </button> */}
+
+                                                        <button class="btn mt-2 ml-3 w-100 p-2" type="submit"  style={{backgroundColor:"#9c27b0", color:"white"}}>   Create an account</button>
                                                         <hr />
-                                                        <button
+                                                        {/* <button
                                                             style={{ width: "92vh" }}
                                                             variant="contained"
                                                             className="login-google-btn mt-2 ml-3 w-100"
                                                         >
                                                             {" "}
-                                                            <FcGoogle style={{ width: "4rem", height: "4vh" }} />
-                                                            Login with Google
-                                                        </button>
-                                                        {/* <FaFacebook className='m-2 h-5'/>
-                            <SiApplepodcasts/>
-                            <FaYoutube/> */}
-
+                                                           
+                                                        </button> */}
+                                                        <button class="btn btn-light mt-2 ml-3 w-100" ><FcGoogle style={{ width: "4rem", height: "4vh" }} />
+                                                            Login with Google</button>
                                                     </form>
                                                 )}
                                             </Formik>
@@ -142,7 +142,7 @@ const Signup = () => {
                                         </div>
                                         <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
                                             <img
-                                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                                                src={sample}
                                                 className="img-fluid"
                                                 alt="Sample image"
                                             />

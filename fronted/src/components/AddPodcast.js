@@ -88,9 +88,9 @@ const AddPodcast = () => {
   };
 
   return (
-    <div style={{minHeight:"100vh" ,backgroundColor: "#151515"}}> 
-      <div className="card col-md-6  mx-auto "  >
-        <div className="card-body    p-5" >
+    <div style={{minHeight:"100vh" }}> 
+      <div className="card col-md-6  mt-5 mx-auto "  >
+        <div className="card-body  p-5" >
           <h1 style={{textAlign:"center"}}>Add Podcast</h1>
           <hr />  
           <Formik initialValues={podcastform} onSubmit={formSubmit}>
@@ -137,7 +137,7 @@ const AddPodcast = () => {
                   onChange={uploadFile}
                   required
                 />
-                <button disabled={isSubmitting} className="btn btn-primary mt-5 w-100" type="submit" style ={{backgroundColor:"#4C3575"}}>
+                <button disabled={isSubmitting} className="btn mt-5 w-100 p-2" type="submit"  style={{backgroundColor:"#9c27b0", color:"white"}}>
                   Submit
                 </button>
               </form>
