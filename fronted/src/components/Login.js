@@ -1,4 +1,4 @@
-import { Button, Card, Container, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from "@mui/material";
+import { Button, FormControl, IconButton, InputAdornment, InputLabel, OutlinedInput, TextField } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { Formik } from "formik";
 import Swal from "sweetalert2";
@@ -83,7 +83,7 @@ const Login = () => {
       <section className="vh-100 p-5 mt-5">
         <div className="container-fluid h-custom">
           <div className="row d-flex justify-content-center align-items-center h-100">
-            <div className="col-md-9 col-lg-6 col-xl-5">
+            <div className="col-md-6 col-lg-6 col-xl-5">
               <img
                 src={sample}
                 className="img-fluid"
@@ -94,7 +94,7 @@ const Login = () => {
               <Formik initialValues={loginForm} onSubmit={LoginSubmit}>
                 {({ values, handleSubmit, handleChange }) => (
                   <form onSubmit={handleSubmit}>
-                    {/* <img className="logo-btn " src="https://t4.ftcdn.net/jpg/02/90/67/89/360_F_290678971_Bk11xnoP5lQw4US7wCSId6jcKmWSfDBg.jpg" alt="" /> */}
+                 
                     <h1 style={{ textAlign: "center" }}>Log In</h1>
                     <hr />
                     <br />

@@ -55,9 +55,9 @@ const AllListpodcast = () => {
               <h1 style={{ fontSize: "2.5rem", fontWeight: "bolder", color: "white" }}>{podcast.title}</h1>
               <p style={{ color: "white", marginTop: "2rem" }}>{podcast.description.substring(0, 200)} ...</p>
               {/* <p>by {podcast.author.username}</p> */}
-              <Button variant="contained"  style={{backgroundColor:"#9c27b0", color:"white"}} className="p-2 w-25"
+              <Button variant="contained"  style={{backgroundColor:"#9c27b0", color:"white"}} className="p-2.5 mx-auto"
                 onClick={(e) => navigate("/listenPodcast/" + podcast._id)}
-              >ListenPodcast
+              ><i className="fas fa-podcast"></i>&nbsp;&nbsp; ListenPodcast
               </Button>
             </div>
           </div>

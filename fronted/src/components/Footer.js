@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 const Footer = () => {
     return (
         <>
-
             <footer className="bg-light text-center text-lg-start" >
                 {/* Grid container */}
                 <div className="container p-4 pb-0">
@@ -22,7 +21,6 @@ const Footer = () => {
                             <div className="col-md-5 col-12 mb-4 mb-md-0">
                                 {/* Email input */}
                                 <div className="form-outline mb-4">
-
                                     <TextField style={{ width: "100%", marginBottom: "2rem" }} label="Email" variant="outlined"
                                         type="email"
                                         placeholder="Email"

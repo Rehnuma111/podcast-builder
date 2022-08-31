@@ -50,7 +50,7 @@ const Home = () => {
                                             <h1 className="display-3 fw-bold ls-tight mb-4">
                                                 {" "}
                                                 <Typist avgTypingDelay={20} onTypingDone={() => setCount(0)}>
-                                                    <span>Your podcast publishing&nbsp;</span> <span className="text-primary">platfrom</span>{" "}{" "}
+                                                    <span>Your podcast publishing&nbsp;</span> <span style={{  color: "#9c27b0" }}>platfrom</span>{" "}{" "}
                                                     <Typist.Backspace count={50} delay={200} />
                                                     
                                                 </Typist>
