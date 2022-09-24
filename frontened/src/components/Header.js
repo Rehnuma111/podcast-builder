@@ -47,16 +47,6 @@ const Header = () => {
   <nav className="navbar navbar-expand-lg navbar-light bg-light">
     {/* Container wrapper */}
     <div className="container">
-      {/* Navbar brand */}
-      <a className="navbar-brand me-2" href="https://mdbgo.com/">
-        <img
-          src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-          height={16}
-          alt="MDB Logo"
-          loading="lazy"
-          style={{ marginTop: "-1px" }}
-        />
-      </a>
       {/* Toggle button */}
       <button
         className="navbar-toggler"

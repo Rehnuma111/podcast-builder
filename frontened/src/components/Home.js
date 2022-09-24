@@ -1,6 +1,8 @@
 import { TextField } from "@mui/material";
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import Typist from "react-typist";
+import Trending from "./Trending";
 
 const Home = () => {
     const [count, setCount] = useState(1);
@@ -16,8 +18,6 @@ const Home = () => {
                 <div style={{ display: "none" }} />
                 <div>
                     <div data-draggable="true" style={{ position: "relative" }}>
-                        {/**/}
-                        {/**/}
                         <section
                             draggable="false"
                             className="overflow-hidden pt-0"
@@ -54,6 +54,7 @@ const Home = () => {
                                                     {/* <Typist.Backspace count={50} delay={200} /> */}
                                                 </Typist>
                                             </h1>{" "}
+                                            <NavLink to="/login">
                                             <a
                                                 className="btn  btn-lg py-3 px-5 mb-2 mb-md-0 me-md-2"
                                                 href="#"
@@ -62,20 +63,13 @@ const Home = () => {
                                                 style={{ backgroundColor: "#9c27b0", color: "white" }}
                                             >
                                                 Get started
-                                            </a>{" "}
-                                            <a
-                                                className="btn  btn-light btn-lg py-3 px-5 mb-2 mb-md-0"
-                                                data-ripple-color="primary"
-                                                href="#"
-                                                role="button"
-                                                aria-controls="#picker-editor"
-                                            >
-                                                Learn more
                                             </a>
+                                            </NavLink>
                                         </div>
                                     </div>
                                 </div>
                             </section>
+                        <Trending />
                         </section>
                         {/* Grid container */}
                         <div className="container p-4 pb-0">
@@ -115,7 +109,6 @@ const Home = () => {
                         </div>
                         {/* Grid container */}
                         {/* Copyright */}
-                        {/**/}
                     </div>
                 </div>
             </div>
