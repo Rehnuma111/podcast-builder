@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 import app_config from "../config";
 
 
-const AddPodcast = () => {
+const Publish = () => {
   const [thumbnail, setThumbnail] = useState("");
 
   const getUser = () => {
@@ -88,18 +88,18 @@ const AddPodcast = () => {
   };
 
   return (
-    <div style={{minHeight:"100vh" }}> 
-      <div className="card col-md-6  mt-5 mx-auto "  >
-        <div className="card-body  p-5" >
-          <h1 style={{textAlign:"center"}}>Add Podcast</h1>
-          <hr />  
+    <div style={{ minHeight: "100vh" }}>
+      <div className=" card col-md-6  mt-5 mb-5 mx-auto "  >
+        <div className=" card-body p-5" >
+          <h1 style={{ textAlign: "center" }}>Add Podcast</h1>
+          <hr />
           <Formik initialValues={podcastform} onSubmit={formSubmit}>
             {({ values, handleChange, handleSubmit, isSubmitting }) => (
               <form onSubmit={handleSubmit}>
-                <label className="form-label mt-3"><b>Title</b></label>
+                <h1 className="form-label mt-3 "><b>Title</b></h1>
                 <input
                   placeholder="Title"
-                  className="form-control "
+                  className="form-control p-3 "
                   onChange={handleChange}
                   value={values.title}
                   id="title"
@@ -116,29 +116,29 @@ const AddPodcast = () => {
                 /> */}
 
                 <div class="mb-3">
-                  <label for="exampleFormControlTextarea1" className="form-label">Description</label>
-                  <textarea className="form-control" placeholder="description" onChange={handleChange} value={values.description}
+                  <h1 className="form-label h-13 mt-3">Description</h1>
+                  <textarea className="form-control p-4" placeholder="Description" onChange={handleChange} value={values.description}
                     id="description" rows="3"></textarea>
                 </div>
 
-                <label className="mt-3 ">Upload Thumbnail</label>
+                <h1 className="form-label mt-3">Upload Thumbnail</h1>
                 <input
                   type="file"
-                  className="form-control"
+                  className="form-control p-3"
                   onChange={uploadThumbnail}
                   required
 
                 />
+                <h1 className="form-label mt-3">Upload File</h1>
 
-                <label className="mt-3">Upload File</label>
                 <input
                   type="file"
-                  className="form-control"
+                  className="form-control p-3"
                   onChange={uploadFile}
                   required
                 />
-                <button disabled={isSubmitting} className="btn mt-5 w-100 p-2" type="submit"  style={{backgroundColor:"#9c27b0", color:"white"}}>
-                  Submit
+                <button disabled={isSubmitting} className="btn mt-5 w-100 p-2" type="submit" style={{ backgroundColor: "#9c27b0", color: "white" }}>
+                  Publish Podcast
                 </button>
               </form>
             )}
@@ -148,4 +148,4 @@ const AddPodcast = () => {
     </div>
   );
 };
-export default AddPodcast;
+export default Publish;

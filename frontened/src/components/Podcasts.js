@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import app_config from "../config";
 import "../css/Allistpodcast.css";
-const AllListpodcast = () => {
+const Podcasts = () => {
 
   const url = app_config.api_url;
   const [podcastList, setPodcastList] = useState([]);
@@ -94,4 +94,4 @@ const AllListpodcast = () => {
   );
 };
 
-export default AllListpodcast;
+export default Podcasts;

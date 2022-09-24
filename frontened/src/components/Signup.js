@@ -8,9 +8,13 @@ import Swal from "sweetalert2";
 import app_config from "../config";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import sample from "./images/Signup.png";
+import { GoogleLogin } from "react-google-login";
 
+const responseGoogle=response =>{
+    console.log(response);
+
+};
 const Signup = () => {
-
 
     const [values, setValues] = React.useState({
         password: '',
@@ -132,8 +136,11 @@ const Signup = () => {
                                                             {" "}
                                                            
                                                         </button> */}
-                                                        <button class="btn btn-light mt-2 ml-3 w-100" ><FcGoogle style={{ width: "4rem", height: "4vh" }} />
-                                                            Login with Google</button>
+                                                        
+                                                       <GoogleLogin  
+                                                        clientId="635127723306-isvukg1u5al1bgbrjr7crkbloc5g67p6.apps.googleusercontent.com"
+                                                        onSuccess={responseGoogle}
+                                                        onFailure={responseGoogle}/>
                                                     </form>
                                                 )}
                                             </Formik>
@@ -152,13 +159,6 @@ const Signup = () => {
                     </div>
                 </div>
             </section>
-
-
-
-
-
-
-
         </div>
     );
 };
