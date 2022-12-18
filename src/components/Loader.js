@@ -4,9 +4,9 @@ import React from 'react'
 
 const Loader = () => {
   return (
-    <div className="container d-flex justify-content-center my-5">
+    <div style={{marginTop: "13rem"}} className="container d-flex justify-content-center ">
       <Box>
-        <CircularProgress size="10rem" color='inherit'/>
+        <CircularProgress size="5rem" color='inherit'/>
       </Box>
     </div>
   )

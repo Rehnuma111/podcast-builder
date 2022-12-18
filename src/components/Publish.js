@@ -108,7 +108,7 @@ const Publish = () => {
 
                 <div class="mb-3">
                   <h1 className="form-label h-13 mt-3">Description</h1>
-                  <textarea className="form-control p-4" placeholder="Description" onChange={handleChange} value={values.description}
+                  <textarea className="form-control p-4" required placeholder="Description" onChange={handleChange} value={values.description}
                     id="description" rows="3"></textarea>
                 </div>
 

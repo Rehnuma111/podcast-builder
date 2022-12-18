@@ -104,7 +104,9 @@ const Login = () => {
                       placeholder="Email"
                       id="email"
                       value={values.email}
-                      onChange={handleChange} />
+                      onChange={handleChange} 
+                      required
+                      />
 
                     <FormControl style={{ width: "100%", marginBottom: "2rem" }} variant="outlined">
                       <InputLabel htmlFor="outlined-adornment-password">
@@ -116,6 +118,7 @@ const Login = () => {
                         type={showPassword ? "text" : "password"}
                         value={values.password}
                         onChange={handleChange}
+                        required
                         endAdornment={
                           <InputAdornment position="end">
                             <IconButton
